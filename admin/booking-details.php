@@ -78,15 +78,14 @@ if($ambregno2!=''):
 $id = $_GET['id'];   
 $ret = mysqli_query($con, "SELECT * FROM tblambulancehiring WHERE ID = '$id'");
 
-
 while ($row = mysqli_fetch_array($ret)) {
    $arnum = $row['AmbulanceRegNo'];
 ?>
+<!-- Show Ambulance Details -->
 <table border="1" class="table table-bordered mg-b-0">
     <tr align="center">
         <th colspan="6" style="font-size:20px;color:blue;text-align: center;">
             View Request Details of #<?php echo $row['BookingNumber']; ?></th>
-        
     </tr>
     <tr>
         <th>Patient Name</th>
@@ -131,7 +130,6 @@ while ($row = mysqli_fetch_array($ret)) {
     <td colspan="3"><?php echo $row['PatientRelation']; ?></td>
   </tr>
     <!-- Display other request details -->
-
     <?php
     $atype = $row['AmbulanceType'];  
     $ambulanceTypeText = "";
