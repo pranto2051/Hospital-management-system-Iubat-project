@@ -95,6 +95,12 @@ while ($row = mysqli_fetch_array($ret)) {
         <td><?php echo $row['RelativeName']; ?></td>
     </tr>
     <tr>
+      <th>Patient Gender</th>
+      <td><?php echo $row['PatientGender']; ?></td>
+      <th>Patient Age</th>
+      <td><?php echo $row['PatientAge']; ?></td>
+    </tr>
+    <tr>
     <th>Relative Contact Number</th>
     <td><?php  echo $row['RelativeConNum'];?></td>
     <th>Hiring Date</th>
@@ -118,6 +124,11 @@ while ($row = mysqli_fetch_array($ret)) {
     <td><?php  echo $row['State'];?></td>
     <th>Message</th>
     <td><?php  echo $row['Message'];?></td>
+  </tr>
+  
+  <tr>
+    <th>Patient Relation</th>
+    <td colspan="3"><?php echo $row['PatientRelation']; ?></td>
   </tr>
     <!-- Display other request details -->
 
